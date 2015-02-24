@@ -1,5 +1,6 @@
 #include "Cell.h"
 
+// comment
 Cell::Cell(int r, int c)
 {
    dir = DOWN;  //the first direction that will be tried after this location
