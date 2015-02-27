@@ -71,7 +71,7 @@ T* StackLinked<T>::peek()
 	
 	if(!isEmpty) {
 	
-		item = top -> getItem();
+		item = top -> getNext();
 		
 	}
 	
@@ -81,9 +81,19 @@ T* StackLinked<T>::peek()
 template < class T >
 void StackLinked<T>::push(T* item)
 {
+
 	NextNode<T>* curr = new NextNode<T>(item);
-	curr -> setNext(top);
-	top = curr;
+
+	if (sze == 0) {
+	
+		top = curr;
+		
+	} else {
+	
+		curr -> setNext(top);
+		top = curr;
+		
+	}
 	
 	sze++;
 }
