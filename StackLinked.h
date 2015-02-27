@@ -69,9 +69,10 @@ T* StackLinked<T>::peek()
 {
 	T* item = NULL;
 	
-	if(!isEmpty) {
+	if(!isEmpty()) 
+	{
 	
-		item = top -> getNext();
+		item = top -> getItem();
 		
 	}
 	
